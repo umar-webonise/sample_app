@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   resources :users
 
+  resources :account_activations, only: [:edit]
+
   get 'about'   => 'static_pages#about'
 
   get 'contact' => 'static_pages#contact'
